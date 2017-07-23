@@ -3,7 +3,7 @@
  * */
 #include <iostream>
 using std::cin;
-using std::cout; 
+using std::cout;
 using std::endl;
 #include <string>
 using std::string;
@@ -14,6 +14,7 @@ using std::string;
  * */
 int countChars(const string& s, char c)
 {
+ s = "hello";
 	return 0;
 }
 

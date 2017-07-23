@@ -140,6 +140,36 @@ int main()
 	 * the minimal value, the maximal value, and the average value
 	 * of all the (non-negative) integers that were entered.
 	 * (Hint: you don't have to store all those numbers at once... )*/
+	cout << "enter an integer. enter a negative integer to stop and compute. \n";
+	int z, min, max, sum, counts;
+	sum = 0.0;
+	count = 0;
+	cin >> z;
+	min = z;
+	max = z;
+	while (z >= 0.0) {
+		sum += z;
+		counts++;
+		if (z > max) {
+			max = z;
+		}
+		else if (z < min) {
+			min = z;
+		cout << "enter value:";
+		cin >> z;
+		}
+	}
+if (z == 0) {
+	cout << "none \n"; }
+else {
+	sum /= counts;
+	cout << "Minimal value: " << min << " Maximal: " << max << " Average: " << sum << "\n";
+	}
+
+	/*int yo;
+	cin >> yo;
+	if (yo < 0) {
+		cout << "number is less than zero!";} */
 	return 0;
 }
 

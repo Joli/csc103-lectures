@@ -7,6 +7,7 @@
 /* NOTE: if it weren't for the "using" statement below,
  * we would have to type std::cout << ... all the time,
  * instead of just plain old  cout << ... */
+using std::cin;
 using std::cout;
 
 #include <string>
@@ -32,7 +33,9 @@ int main()
 	/* NOTE: numbers are interpreted literally (not as variables).
 	 * Indeed, variables can't begin with a number.  TODO: uncomment the
 	 * following line and try to compile: */
-	// int 22x;
+	/* int 22x;
+		22x = 5;
+		cout << 22x << "\n"; */
 
 	/* if we want to keep the fractional part, we need
 	 * a different datatype, like double or float. */
@@ -65,6 +68,50 @@ int main()
 	/* NOTE: the sizeof(...) operator probably won't work the way
 	 * you expect on strings.  */
 	// cout << "size of s is: " << sizeof(s) << "\n";
+
+
+	//TODO: from bottom - reads the 5 integers
+/*
+	int num;
+	num = 5;
+
+	cout << "Enter your numbers:" << "\n";
+	int highNum;
+	cin >> highNum; //saves first value as highest number
+
+	int nextNum; //new values
+	int i;
+	for ( i = 2; i <= num; i++ )
+	{
+		cin >> nextNum; //input
+		if (nextNum > highNum)
+			highNum = nextNum;
+	}
+	cout << "Your highest number was " << highNum << "\n";
+	*/
+
+//average
+
+	int input, j;
+	double sum, average;
+	cout << "Type in 5 numbers for the average." << "\n";
+
+	for ( j = 2; j <= 6; j++ )
+	{
+		cin >> input; //input
+		sum += input;
+	}
+	//cout << sum << "\n";
+
+	average = sum / 5;
+
+	//cout << average;
+
+
+	cout << "Your average is: " << average;
+
+
+
 
 	return 0;
 	/* NOTE: the return 0 exits main, and thus ends our program.

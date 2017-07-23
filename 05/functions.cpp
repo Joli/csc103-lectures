@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <string>
 using std::cin;
 using std::cout;
 using std::endl;
@@ -61,36 +62,126 @@ double h(double& x) {
 	 * */
 }
 
-
+/*
 int main()
 {
-	/* HOW TO CALL? */
+
+ // HOW TO CALL?
 	cout << f(3) << "\n";
 
-	/* BY VALUE VS BY REFERENCE */
+	// BY VALUE VS BY REFERENCE
 	double a = 3;
 	cout << "g(a) = " << g(a) << "\n";
 	cout << "a = " << a << "\n";
 	cout << "h(a) = " << h(a) << "\n";
 	cout << "a = " << a << "\n";
-	/* looks like x in g(...) was a COPY of a.  NOTE:
-	 * you can make them share memory if you want...
-	 * */
+	//looks like x in g(...) was a COPY of a.  NOTE:
+	 //you can make them share memory if you want...
+	 //
 
+ int first;
+
+  cout << maxValue(first) << " is the maximum value.";
 	return 0;
 }
+*/
+
+
 
 /* TODO: write a function that takes 3 integers and returns
  * the maximal value */
 
+ /*
+int maxValue(int first);
+
+int main()
+{
+  int first;
+
+  cout << maxValue(first) << " is the maximum value.";
+	return 0;
+}
+
+//maximum value function
+int maxValue(int first) {
+ int greater = 0;
+ for (int i = 0; i < 3; i++) {
+ cin >> first;
+  if (first > greater)
+   greater = first;
+  //cout << greater;
+ }
+ return greater;
+} */
+
 /* TODO: write a function that takes 3 doubles and returns the average value.
  * also write code in main to test it.  */
+
+/*
+double avgValue(double first, double second, double third);
+
+ int main()
+ {
+  double first, second, third, average;
+  cout << avgValue(first, second, third) << " is the average.";
+  return 0;
+ }
+
+ double avgValue (double first, double second, double third) {
+  cin >> first >> second >> third;
+  double average, sum;
+  sum = first + second + third;
+  average = sum/3;
+  return average;
+ }
+/*
+
 /* TODO: write an isPrime function that takes an integer and returns a boolean
  * value indicating whether or not it is prime.  */
+
+/*
+int isPrime(int num);
+
+ int main()
+ {
+  int num;
+  cout << "Is this prime?\n";
+  cout << isPrime(num);
+ }
+
+ int isPrime (int num) {
+  bool prime;
+  cin >> num;
+  if (num%2 != 0)
+   prime = true;
+  return prime;
+ }
+*/
 
 /* TODO: write a function that takes two integer parameters and swaps the
  * contents, i.e., if x=2 and y=5, then after calling swap(x,y), y=2 and x=5
  * Also write test code in main! */
+
+void swap(int x, int y);
+
+ int main()
+ {
+  int x, y, z;
+  cout << "Type two numbers and they will be swapped!\n";
+  cin >> x >> y;
+  swap(x,y);
+
+ }
+
+void swap(int x, int y) {
+int z;
+ //cout << "x = " << x << " and y = " << y;
+ z = x;
+ x = y;
+ y = z;
+ //cout << "Now x = " << x << " and y = " << y;
+ cout << x << " and " << y;
+}
 
 /* TODO: write a function that takes an integer n and returns the
  * nth term in the Fibonacci sequence. */

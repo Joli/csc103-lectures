@@ -7,6 +7,8 @@ using std::set;
 #include <string>
 using std::string;
 #include <cstdio>
+#include <vector>
+using std::vector;
 
 void setTest() {
 	/* store perfect squares in a set and then do some searches. */
@@ -57,10 +59,32 @@ set<int> intersect(const set<int>& s1, const set<int>& s2) {
  * not already present*. You can return a boolean indicating whether
  * or not x insertion took place. */
 
+vector<int> V (4, 100);
+int x = 0;
+bool insert(vector<int>& V, int x);
+
+int main() {
+	cin >> x;
+	cout << insert(V, x);
+	cout << V.size();
+}
+
+bool insert(vector<int>& V, int x) {
+	for (int i = 0; i <= V.size()-1; i++) {
+			if (V[i] != x)
+				V.push_back(x);
+
+return true;
+	}
+}
 /* TODO: write a function that removes a value from a vector if it
  * is present.  It should take a vector and a value x, and remove
  * x if it is in the vector. NOTE: you don't have to preserve the
  * order of the other elements. */
+
+/*
+
+//notes!!!
 
 void intTest() {
 	set<int> s1 = {2,3,4,5,6,7};
@@ -74,6 +98,8 @@ void intTest() {
 }
 
 /* NOTE: sets do not store duplicates: */
+
+/*
 void setTest2() {
 	set<int> s;
 	s.insert(5);
@@ -89,3 +115,4 @@ int main(void)
 	intTest();
 	return 0;
 }
+*/

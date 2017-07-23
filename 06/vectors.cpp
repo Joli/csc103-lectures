@@ -10,14 +10,22 @@ using std::string;
 using std::vector;
 #include <cstdio>
 
+
 /* exercise: write a function that takes a vector and searches
  * for a particular value, returning true iff it is found. */
+
+/*
+
 bool search(const vector<string>& V, string x) {
+
 	/* NOTE: the constant by reference parameter is a way
 	 * to "fake" by value, but much faster (since compiler doesn't
 	 * have to copy entire vector when this is called).  */
+
+/*
 	for (size_t i = 0; i < V.size(); i++) {
 		/* i ranges over valid indexes into V */
+/*
 		if (x == V[i]) return true;
 	}
 	return false;
@@ -25,8 +33,11 @@ bool search(const vector<string>& V, string x) {
 
 /* NOTE: the capacity() function tells us how much space the vector
  * has available.  Call this function to watch how it grows: */
+
+ /*
 void test() {
 	/* watch how the vector grows: */
+	/*
 	printf("testing capacity growth...\n");
 	vector<int> v;
 	for (size_t i = 0; i < 20; i++) {
@@ -42,6 +53,7 @@ int main()
 						 it is a machine that creates datatypes when
 						 given any datatype as input. */
 	// use vector<int> if you want a list of numbers instead.
+/*
 	string s;
 	int j = 0;
 	while (cin >> s) {
@@ -50,11 +62,15 @@ int main()
 #else
 		/* TODO: change the 1 to a 0 above and make sure you understand
 		 * what is going wrong.  See the test() function above...  */
+
+/*
 		V[j++] = s;
 		#endif
 	}
 	/* at this point we have all of stdin in memory. */
 	/* now print in reverse order: */
+
+	/*
 	for (int i = V.size()-1; i >= 0; i--) {
 		cout << V[i] << "\n";
 	}
@@ -74,6 +90,20 @@ int main()
  *
  * This might be a little challenging.  Ask questions if you get stuck.
  * */
+
+int main() {
+
+	vector<int> V (4, 100);
+	cout << vector V;
+
+	/*
+	bool search(const vector<int>& V, int x, int low, int high) {
+	low = V[0];
+	high = V.size()-1;
+		} */
+	}
+
+//on the notes of march 22nd
 
 /* TODO: write a function that takes a vector and places the elements
  * in sorted order.  This is also kind of challenging. */
